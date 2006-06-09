@@ -10,7 +10,7 @@ DummyNav_SOURCES = \
 	dummy_nav.h \
 	dummy_nav.cpp
 
-DummyNav_LDFLAGS = @RACK_LEVEL1_LIBS@
+DummyNav_LDFLAGS = @RACK_LEVEL2_LIBS@
 
 EXTRA_DIST = \
 	Kconfig

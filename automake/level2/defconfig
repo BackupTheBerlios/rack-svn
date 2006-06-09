@@ -1,15 +1,15 @@
 #
 # Automatically generated make config: don't edit
-# RACK-LEVEL1 version: 0.0.1
-# Fri Jun  9 16:49:15 2006
+# RACK-LEVEL2 version: 0.0.1
+# Fri Jun  9 16:47:20 2006
 #
-CONFIG_RACK_LEVEL1_VERSION="0.0.1"
+CONFIG_RACK_LEVEL2_VERSION="0.0.1"
 
 #
 # Build options
 #
-CONFIG_RACK_INSTALLDIR="/home/`whoami`/rack_level1/bin"
-CONFIG_RACKDIR="/home/`whoami`/rack/bin"
+CONFIG_RACK_INSTALLDIR="/home/`whoami`/rack_level2/bin"
+CONFIG_RACKDIR="/home/`whoami`/rack_level1/bin"
 # CONFIG_RACK_JAVA_GUI is not set
 
 #

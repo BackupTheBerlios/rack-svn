@@ -11,7 +11,7 @@ DummyDrv_SOURCES = \
 	dummy_driver.h \
 	dummy_driver.cpp
 
-DummyDrv_LDFLAGS = @RACK_LEVEL1_LIBS@
+DummyDrv_LDFLAGS = @RACK_LEVEL2_LIBS@
 
 
 EXTRA_DIST = \
