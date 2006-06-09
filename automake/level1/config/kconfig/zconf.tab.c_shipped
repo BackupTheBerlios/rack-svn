@@ -1,5 +1,5 @@
 
-char proj_config[] = "RACK-XYZ Configuration";
+char proj_config[] = "RACK-LEVEL1 Configuration";
 
 /* A Bison parser, made by GNU Bison 1.875a.  */
 

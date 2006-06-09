@@ -1,8 +1,8 @@
 KCONFIG_DIR=./config/kconfig
 CC := gcc
 
-PROJNAME := rack_xyz
-PROJNAME_CAP := RACK-XYZ
+PROJNAME := rack_level1
+PROJNAME_CAP := RACK-LEVEL1
 
 ifneq ($(MAKECMDGOALS),help)
 ifeq ($(srctree),)

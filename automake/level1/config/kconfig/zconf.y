@@ -11,7 +11,7 @@
 #include <string.h>
 #include <stdbool.h>
 
-const char proj_config[] = "RACK-XYZ Configuration";
+const char proj_config[] = "RACK-LEVEL1 Configuration";
 
 #define printd(mask, fmt...) if (cdebug & (mask)) printf(fmt)
 

@@ -24,8 +24,8 @@
 #include <time.h>
 #include <stdlib.h>
 
-const char proj_name_cap[] = "RACK-XYZ";
-const char proj_version_name[] = "RACK_XYZ_VERSION";
+const char proj_name_cap[] = "RACK-LEVEL1";
+const char proj_version_name[] = "RACK_LEVEL1_VERSION";
 
 //#define DEBUG
 

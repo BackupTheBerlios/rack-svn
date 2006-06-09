@@ -14,16 +14,16 @@
 #define LKC_DIRECT_LINK
 #include "lkc.h"
 
-const char proj_name_cap[] = "RACK-XYZ";
-const char proj_version_name[] = "RACK_XYZ_VERSION";
+const char proj_name_cap[] = "RACK-LEVEL1";
+const char proj_version_name[] = "RACK_LEVEL1_VERSION";
 
-const char conf_def_filename[] = "../../.rack_xyz_config";
+const char conf_def_filename[] = "../../.rack_level1_config";
 
 const char conf_defname[] = "defconfig";
 
 const char *conf_confnames[] = {
-    "../../.rack_xyz_config",
-    "/etc/rack_xyz-config",
+    "../../.rack_level1_config",
+    "/etc/rack_level1-config",
     conf_defname,
     NULL,
 };

@@ -3,11 +3,11 @@
 
 AC_PREREQ(2.59)
 
-m4_define([ProjectName], [rack_xyz])
-m4_define([PrefixDefault], [/usr/local/rack_xyz])
+m4_define([ProjectName], [rack_level1])
+m4_define([PrefixDefault], [/usr/local/rack_level1])
 m4_define([SourceFile], [GNUmakefile.am])
 
-AC_INIT([rack_xyz],m4_normalize(m4_include([config/version])),[])
+AC_INIT([rack_level1],m4_normalize(m4_include([config/version])),[])
 
 PROJNAME=ProjectName
 AC_SUBST(PROJNAME)
@@ -475,8 +475,8 @@ LIBS="\
 ${XENOMAI_LIBS} \
 ${RACK_LIBS}"
 
-RACK_XYZ_LIBS=${RACK_CUR_LIBS}
-AC_SUBST(RACK_XYZ_LIBS)
+RACK_LEVEL1_LIBS=${RACK_CUR_LIBS}
+AC_SUBST(RACK_LEVEL1_LIBS)
 
 AC_MSG_CHECKING([for common libs])
 AC_MSG_RESULT([${LIBS}])

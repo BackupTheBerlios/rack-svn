@@ -9,7 +9,7 @@ pkgdatadir="${datadir}/@PACKAGE@"
 includedir="@includedir@"
 
 #
-# current RACK project
+# current RACK project (level 1)
 #
 RACK_CUR_VERSION="@PACKAGE_VERSION@"
 RACK_CUR_PREFIX="${staging}${prefix}"
@@ -18,7 +18,7 @@ RACK_CUR_LDFLAGS="-I${staging}${libdir}"
 RACK_CUR_LIBS="@RACK_CUR_LIBS@"
 
 #
-# RACK
+# RACK (level 0)
 #
 RACK_VERSION="@RACK_VERSION@"
 RACK_PREFIX="@RACK_PREFIX@"

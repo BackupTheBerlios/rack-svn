@@ -25,8 +25,8 @@
 #define LKC_DIRECT_LINK
 #include "lkc.h"
 
-const char proj_name_cap[] = "RACK-XYZ";
-const char proj_version_name[] = "RACK_XYZ_VERSION";
+const char proj_name_cap[] = "RACK-LEVEL1";
+const char proj_version_name[] = "RACK_LEVEL1_VERSION";
 
 static char menu_backtitle[128];
 static const char mconf_readme[] = N_(

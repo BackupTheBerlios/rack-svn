@@ -1,8 +1,8 @@
-config RACK_XYZ_VERSION
+config RACK_LEVEL1_VERSION
     string
     default "0.0.1"
 
-mainmenu "RACK-XYZ configuration"
+mainmenu "RACK-LEVEL1 configuration"
 
 menu "Build options"
 

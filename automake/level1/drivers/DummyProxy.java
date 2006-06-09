@@ -10,7 +10,7 @@
  *      Joerg Langenberg  <joerg.langenberg@gmx.net>
  *
  */
-package rack_xyz.drivers;
+package rack_level1.drivers;
 
 import rack.main.naming.*;
 import rack.main.proxy.*;
