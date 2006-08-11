@@ -1,0 +1,27 @@
+
+includedir = $(prefix)/include/drivers
+
+SUBDIRS = \
+	. \
+	dummy
+
+include_HEADERS = \
+	dummy_proxy.h
+
+#dist_java_JAVA =
+#
+#if CONFIG_RACK_DUMMY_JAVA
+#
+#dist_java_JAVA +=
+#	DummyProxy.java \
+#	DummyDataMsg.java \
+#	DummySensMsg.java
+#
+#endif
+#
+#install-dist_javaJAVA: classdist_java.stamp
+
+EXTRA_DIST = \
+	Kconfig \
+	\
+	dummy_proxy.cpp

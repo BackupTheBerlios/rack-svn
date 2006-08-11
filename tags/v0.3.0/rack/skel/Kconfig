@@ -1,0 +1,7 @@
+menu "Skeleton"
+
+menu "Dummy"
+source "skel/dummy/Kconfig"
+endmenu
+
+endmenu

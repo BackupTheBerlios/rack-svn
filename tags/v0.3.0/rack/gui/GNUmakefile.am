@@ -1,0 +1,27 @@
+
+SUBDIRS = \
+	main \
+	drivers \
+	navigation \
+	perception
+
+if CONFIG_RACK_JAVA_GUI
+
+dist_java_JAVA = \
+	Gui.java \
+	MapViewGui.java \
+	GDOSGui.java \
+	GDOSMessageRenderer.java \
+	GDOSTable.java
+
+install-data-local:
+	install -d -m 755 $(DESTDIR)$(prefix)/gui
+	install -m 644 $(srcdir)/gui.cfg $(DESTDIR)$(prefix)/gui
+
+endif
+
+install-dist_javaJAVA: classdist_java.stamp
+
+EXTRA_DIST = \
+	gui.cfg \
+	gui.manifest

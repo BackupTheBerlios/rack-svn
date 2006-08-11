@@ -1,0 +1,59 @@
+xeno_dir = @XENO_USER_PREFIX@
+xeno_lib_dir = @XENO_LIBRARIES@
+
+bindir = $(prefix)/bin/tims
+etcdir = $(prefix)/etc
+
+etc_HEADERS = \
+	tims_rtnet_example.conf
+
+bin_PROGRAMS = \
+	tims_client \
+	tims_router_tcp
+
+### tims_client ########################################
+
+tims_client_SOURCES = \
+	tims_client.c
+
+tims_client_CFLAGS = \
+	-I$(top_srcdir) \
+	-I$(xeno_dir)/include
+
+#tims_client_LDFLAGS =
+
+tims_client_LDADD = \
+	-L$(xeno_lib_dir) \
+	-lrtdm -lnative \
+	-lpthread
+
+### tims_router_tcp ####################################
+
+tims_router_tcp_SOURCES = \
+	tims_router_tcp.c
+
+tims_router_tcp_CFLAGS = \
+	-I$(top_srcdir) \
+	-I$(xeno_dir)/include
+
+tims_router_tcp_LDADD = \
+	-lpthread
+
+### JAVA  #######################################
+
+dist_java_JAVA =
+
+if CONFIG_RACK_JAVA
+
+dist_java_JAVA += \
+	TimsRouter.java \
+	TimsRouterMbxMsg.java
+
+endif
+
+install-dist_javaJAVA: classdist_java.stamp
+
+### JAVA END #######################################
+
+EXTRA_DIST = \
+	tims_router.h

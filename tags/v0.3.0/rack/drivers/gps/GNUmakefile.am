@@ -1,0 +1,18 @@
+
+bindir = $(prefix)/bin/drivers
+bin_PROGRAMS =
+
+if CONFIG_RACK_GPS_NMEA
+bin_PROGRAMS += GpsNmea
+endif
+
+
+GpsNmea_SOURCES = \
+	gps_nmea.h \
+	gps_nmea.cpp
+
+GpsNmea_LDFLAGS = @RACK_LIBS@
+
+
+EXTRA_DIST = \
+	Kconfig

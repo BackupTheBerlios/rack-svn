@@ -1,0 +1,11 @@
+menu "Navigation"
+
+menu "Pilot"
+source "navigation/pilot/Kconfig"
+endmenu
+
+menu "Position"
+source "navigation/position/Kconfig"
+endmenu
+
+endmenu

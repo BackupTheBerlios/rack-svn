@@ -1,0 +1,7 @@
+
+- Strings over GDOS
+- RackName offset
+- argopts -> string, long
+- comments in rtnet.conf
+- fifo-mailboxes in TiMS
+-
