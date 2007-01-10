@@ -1,0 +1,64 @@
+OPTDIRS =
+OPTHEADERS =
+
+mainincludedir = $(pkgincludedir)/main
+
+if CONFIG_RACK_RTCAN_SUPPORT
+OPTDIRS += canport
+OPTHEADERS += can_port.h
+endif
+
+if CONFIG_RACK_LIBJPEG_SUPPORT
+OPTHEADERS += jpeg_data_dst_mem.h
+endif
+
+maininclude_HEADERS = \
+	$(OPTHEADERS) \
+	angle_tool.h \
+	argopts.h \
+	dxf_map.h \
+	image_tool.h \
+	pilot_tool.h \
+	rack_byteorder.h \
+	rack_debug.h \
+	rack_mailbox.h \
+	rack_mutex.h \
+	rack_module.h \
+	rack_datamodule.h \
+	rack_name.h \
+	rack_proxy.h \
+	rack_time.h \
+	rack_task.h \
+	rack_rtmac.h \
+	serial_port.h
+
+dist_java_JAVA =
+
+if CONFIG_RACK_JAVA
+
+dist_java_JAVA += \
+	RackName.java \
+	RackProxy.java \
+	RackDataProxy.java \
+	GetDataMsg.java \
+	GetContDataMsg.java \
+	StopContDataMsg.java \
+	ContDataMsg.java \
+	GDOSDataMsg.java \
+	GDOS.java
+
+endif
+
+install-dist_javaJAVA: classdist_java.stamp
+
+SUBDIRS = \
+	$(OPTDIRS) \
+	serialport \
+	tims \
+	defines \
+	mailbox \
+	proxy \
+	module \
+	argopts \
+	dxfmap \
+	lib

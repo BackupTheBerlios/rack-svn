@@ -1,0 +1,4 @@
+
+EXTRA_DIST = \
+	rack_module.cpp \
+	rack_datamodule.cpp

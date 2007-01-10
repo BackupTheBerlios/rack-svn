@@ -1,0 +1,53 @@
+
+drvincludedir = $(pkgincludedir)/drivers
+
+SUBDIRS = \
+	. \
+	camera \
+	chassis \
+	gps \
+	ladar \
+	odometry
+
+drvinclude_HEADERS = \
+	camera_proxy.h \
+	chassis_proxy.h \
+	gps_proxy.h \
+	joystick_proxy.h \
+	ladar_proxy.h \
+	odometry_proxy.h
+
+dist_java_JAVA =
+
+if CONFIG_RACK_JAVA
+
+dist_java_JAVA += \
+	CameraProxy.java \
+	CameraDataMsg.java \
+	CameraFormatMsg.java \
+	ChassisProxy.java \
+	ChassisParamMsg.java \
+	ChassisDataMsg.java \
+	ChassisSetActivePilotMsg.java \
+	GpsProxy.java \
+	GpsDataMsg.java \
+	JoystickProxy.java \
+	JoystickDataMsg.java \
+	LadarProxy.java \
+	LadarDataMsg.java \
+	OdometryProxy.java \
+	OdometryDataMsg.java
+
+endif
+
+install-dist_javaJAVA: classdist_java.stamp
+
+EXTRA_DIST = \
+	Kconfig \
+	\
+	camera_proxy.cpp \
+	chassis_proxy.cpp \
+	gps_proxy.cpp \
+	joystick_proxy.cpp \
+	ladar_proxy.cpp \
+	odometry_proxy.cpp

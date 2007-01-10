@@ -1,0 +1,20 @@
+
+bin_PROGRAMS =
+
+if CONFIG_RACK_GPS_NMEA
+bin_PROGRAMS += GpsNmea
+endif
+
+
+CPPFLAGS = @RACK_CPPFLAGS@
+LDFLAGS  = @RACK_LDFLAGS@
+LDADD    = @RACK_LIBS@
+
+
+GpsNmea_SOURCES = \
+	gps_nmea.h \
+	gps_nmea.cpp
+
+
+EXTRA_DIST = \
+	Kconfig

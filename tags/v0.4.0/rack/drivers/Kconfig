@@ -1,0 +1,23 @@
+menu "Drivers"
+
+menu "Camera"
+source "drivers/camera/Kconfig"
+endmenu
+
+menu "Chassis"
+source "drivers/chassis/Kconfig"
+endmenu
+
+menu "Gps"
+source "drivers/gps/Kconfig"
+endmenu
+
+menu "Ladar"
+source "drivers/ladar/Kconfig"
+endmenu
+
+menu "Odometry"
+source "drivers/odometry/Kconfig"
+endmenu
+
+endmenu

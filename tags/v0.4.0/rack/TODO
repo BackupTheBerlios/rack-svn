@@ -1,0 +1,22 @@
+modules
+- RACK data log
+-
+
+refactoring
+- change 2d and 3d to 2D and 3D
+-
+
+Gui
+- common Component for Ladar, Scan2D, Pilot, ...
+
+main
+- cleanup GDOS mess in rack_debug.h, un-inline services
+
+main/tims
+- Strings over GDOS
+- comments in rtnet.conf
+- fifo-mailboxes in TiMS
+-
+
+build system
+- clean DESTDIR handling, specifically wrt/ paths of external components (xenomai, ...)

@@ -1,0 +1,40 @@
+
+timsincludedir = $(pkgincludedir)/main/tims
+
+timsinclude_HEADERS = \
+	tims.h \
+	tims_byteorder.h \
+	tims_endian.h \
+	tims_msg_types.h
+
+SUBDIRS = \
+	router
+
+if CONFIG_RACK_BUILD_KMOD
+SUBDIRS += driver
+endif
+
+dist_java_JAVA =
+
+if CONFIG_RACK_JAVA
+
+dist_java_JAVA += \
+	BigEndianDataInputStream.java \
+	EndianDataInputStream.java \
+	LittleEndianDataInputStream.java \
+	Tims.java \
+	TimsDataMsg.java \
+	TimsMbx.java \
+	TimsMsg.java \
+	TimsRouter.java \
+	TimsRouterMbxMsg.java \
+	TimsTcp.java \
+	TimsException.java \
+	TimsTimeoutException.java
+
+endif
+
+install-dist_javaJAVA: classdist_java.stamp
+
+EXTRA_DIST = \
+	Kconfig

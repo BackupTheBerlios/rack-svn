@@ -1,0 +1,46 @@
+
+bin_PROGRAMS =
+
+if CONFIG_RACK_LADAR_IBEO
+bin_PROGRAMS +=	LadarIbeo
+endif
+
+if CONFIG_RACK_LADAR_HOKUYO_URG
+bin_PROGRAMS +=	LadarHokuyoUrg
+endif
+
+if CONFIG_RACK_LADAR_SICK_LMS200
+bin_PROGRAMS +=	LadarSickLms200
+endif
+
+if CONFIG_RACK_LADAR_SICK_S
+bin_PROGRAMS +=	LadarSickS
+endif
+
+CPPFLAGS = @RACK_CPPFLAGS@
+LDFLAGS  = @RACK_LDFLAGS@
+LDADD    = @RACK_LIBS@
+
+
+LadarIbeo_SOURCES = \
+	ladar_ibeo.h \
+	ladar_ibeo.cpp
+
+LadarIbeo_CPPFLAGS = @RTCAN_CPPFLAGS@
+
+
+LadarHokuyoUrg_SOURCES = \
+	ladar_hokuyo_urg.h \
+	ladar_hokuyo_urg.cpp
+
+LadarSickLms200_SOURCES = \
+	ladar_sick_lms200.h \
+	ladar_sick_lms200.cpp
+
+LadarSickS_SOURCES = \
+	ladar_sick_s.h \
+	ladar_sick_s.cpp
+
+
+EXTRA_DIST = \
+	Kconfig

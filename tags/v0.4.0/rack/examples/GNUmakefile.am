@@ -1,0 +1,12 @@
+
+pkgdata_DATA = \
+	rack_example.dxf
+
+pkgdata_SCRIPTS = \
+	load_rack_sim \
+	load_rack_gui
+
+EXTRA_DIST = \
+	load_rack_sim.in \
+	load_rack_gui.in \
+	rack_example.dxf
